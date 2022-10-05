@@ -1,5 +1,6 @@
 package com.example.rd_softwaredeveloper.recyclerview;
 
+import android.annotation.SuppressLint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +38,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position)
+    public void onBindViewHolder(ViewHolder holder, @SuppressLint("RecyclerView") final int position)
     {
         holder.mTextView.setText(mData.get(position));
         holder.itemView.setOnClickListener(new View.OnClickListener()
